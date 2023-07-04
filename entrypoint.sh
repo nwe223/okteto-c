@@ -1,11 +1,11 @@
-﻿#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # 定义 UUID 及伪装路径、哪吒面板参数，请自行修改. (注意:伪装路径以 / 符号开始,为避免不必要的麻烦,请不要使用特殊符号.)
-UUID='154612a0-e1be-4607-9d96-ef8daf43c15f'
-VMESS_WSPATH='/154612a0-e1be-4607-9d96-ef8daf43c15f-vmess'
-VLESS_WSPATH='/154612a0-e1be-4607-9d96-ef8daf43c15f-vless'
-TROJAN_WSPATH='/154612a0-e1be-4607-9d96-ef8daf43c15f-trojan'
-SS_WSPATH='/154612a0-e1be-4607-9d96-ef8daf43c15f-shadowsocks'
+UUID='e637cc73-75aa-4f3e-8dbd-c5214f01c8ce'
+VMESS_WSPATH='/vmess'
+VLESS_WSPATH='/vless'
+TROJAN_WSPATH='/trojan'
+SS_WSPATH='/shadowsocks'
 NEZHA_SERVER=''
 NEZHA_PORT=''
 NEZHA_KEY=''
@@ -15,7 +15,7 @@ sed -i "s#RELEASE_RANDOMNESS#${RELEASE_RANDOMNESS}#g" /etc/supervisor/conf.d/sup
 
 # 设置 nginx 伪装站
 rm -rf /usr/share/nginx/*
-wget https://gitlab.com/mwkemdow/Back4App/-/raw/main/mikutap.zip -O /usr/share/nginx/mikutap.zip
+wget https://gitlab.com/Misaka-blog/xray-paas/-/raw/main/mikutap.zip -O /usr/share/nginx/mikutap.zip
 unzip -o "/usr/share/nginx/mikutap.zip" -d /usr/share/nginx/html
 rm -f /usr/share/nginx/mikutap.zip
 
